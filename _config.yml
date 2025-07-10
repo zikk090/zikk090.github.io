@@ -1,0 +1,27 @@
+# Site settings
+title: Ezinne Kalu
+description: This is my personal website where I shall show my workings.
+baseurl: ""
+url: "https://zikk090.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title.html
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title.html
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

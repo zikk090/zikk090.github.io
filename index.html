@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="hero">
+    <h1>Welcome to My  Website</h1>
+    <p class="hero-subtitle">I write about how I Hack, Stack and Hustle</p>
+</div>
+
+<section class="featured-posts">
+    <h2>Featured Posts</h2>
+    <div class="posts-grid">
+        {% for post in site.posts limit:6 %}
+            <article class="post-card">
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                <div class="post-meta">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | date: "%B %d, %Y" }}
+                    </time>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="evergreen-content">
+    <h2>Evergreen Content</h2>
+    <p>Here you will find evergreen essays or posts that were particularly well received.</p>
+    <!-- Add your evergreen content here, don't forget this -->
+</section>
