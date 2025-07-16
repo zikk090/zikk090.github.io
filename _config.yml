@@ -1,8 +1,9 @@
 # Site settings
 title: Ezinne Kalu
-description: This is my personal website where I shall show my workings.
+description: Writing about all the things that interest me. Hack, Stack and Hustle always.
+author: Ezinne Kalu
 baseurl: ""
-url: "https://zikk090.github.io"
+url: "https://ezinnekalu.github.io"
 
 # Build settings
 markdown: kramdown

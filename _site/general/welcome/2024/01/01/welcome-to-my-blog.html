@@ -8,21 +8,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a href="/" class="logo">Ezinne Kalu</a>
-                <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/posts">Posts</a></li>
-                </ul>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="/assets/images/profile.jpg" alt="Ezinne Kalu" class="profile-image">
+                <h1 class="profile-name">Ezinne Kalu</h1>
+                <p class="profile-description">My thoughts on hacking, ai, faith, and more.</p>
             </div>
-        </nav>
-    </header>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="/">posts</a></li>
+                    <li><a href="/whoami">whoami</a></li>
+                    <li><a href="/tools">tools</a></li>
+                    <li><a href="/tips">tips</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>🌙</span>
+                    <span>🔍</span>
+                    <span>🌙</span>
+                </div>
+                <p>&copy; 2025 Ezinne Kalu.</p>
+            </div>
+        </aside>
 
-    <main>
-        <div class="container">
+        <!-- Main Content -->
+        <main class="main-content">
             <article class="post">
     <header class="post-header">
         <h1 class="post-title">Welcome to My Blog</h1>
@@ -60,14 +75,8 @@
 
     </div>
 </article>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Ezinne Kalu. All rights reserved.</p>
-        </div>
-    </footer>
+        </main>
+    </div>
 
     <script src="/assets/js/main.js"></script>
 </body>

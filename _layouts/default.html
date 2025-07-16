@@ -8,30 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a href="{{ '/' | relative_url }}" class="logo">{{ site.title }}</a>
-                <ul class="nav-links">
-                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                    <li><a href="{{ '/about' | relative_url }}">About</a></li>
-                    <li><a href="{{ '/posts' | relative_url }}">Posts</a></li>
-                </ul>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="{{ site.title }}" class="profile-image">
+                <h1 class="profile-name">{{ site.title }}</h1>
+                <p class="profile-description">{{ site.description }}</p>
             </div>
-        </nav>
-    </header>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}">posts</a></li>
+                    <li><a href="{{ '/whoami' | relative_url }}">whoami</a></li>
+                    <li><a href="{{ '/tools' | relative_url }}">tools</a></li>
+                    <li><a href="{{ '/tips' | relative_url }}">tips</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>🌙</span>
+                    <span>🔍</span>
+                    <span>🌙</span>
+                </div>
+                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}.</p>
+            </div>
+        </aside>
 
-    <main>
-        <div class="container">
+        <!-- Main Content -->
+        <main class="main-content">
             {{ content }}
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-        </div>
-    </footer>
+        </main>
+    </div>
 
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
